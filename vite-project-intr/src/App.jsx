@@ -1,60 +1,17 @@
 import Header from "./components/Header"
-import { menu , differences } from "./data"
-import MenuItem from "./components/MenuItem"
-import Button from "./components/Button/Button"
-import { useState } from "react" 
+import MenuSection from "./components/MenuSection"
+import DifSection from "./components/DifSection"
 
 export default function App() {
 
-  const [contentType, setContentType] = useState(null)
-
-  //let content = 'Нажмите на кнопку'
-  
-  
-  function handleClick(type) {
-    //console.log('clicked', type)
-    setContentType(type)
-    //content = type
-  }
-
-  // let tabContent = null
-  
-  // if (contentType) {
-  //   tabContent = <p>{differences[contentType]}</p>
-  // }else {
-  //   tabContent = <p>Нажмите на кнопку</p>
-  // }
-
   return(
-    <div>
+    <>
       <Header></Header>
       <main>
-        <section>
-          <h3>Menu</h3>
-          <ul>
-            {menu.map(item => <MenuItem key={item.title} {...item} />)}
-            {/* <MenuItem {...menu[0]}/>
-            <MenuItem {...menu[1]}/>
-            <MenuItem {...menu[2]}/>
-            <MenuItem {...menu[3]}/> */}
-          </ul>
-        </section>
-        <section>
-          <h3>Order</h3>
-          <Button isActive = {contentType === 'per'} onTouch={() => handleClick('per')}  > Перва кнопка</Button>
-          <Button isActive = {contentType === 'vtor'} onTouch={() => handleClick('vtor')} > Вторая кнопка</Button>
-          <Button isActive = {contentType === 'tret'} onTouch={() => handleClick('tret')} > Третья кнопка</Button>
-
-          {/* {contentType ? <p>{differences[contentType]}</p> : <p>Нажмите на кнопку</p> } */}
-          {/* { !contentType ? <p>Нажмите на кнопку</p> : null} */}
-
-          {!contentType && <p>Нажмите на кнопку</p>}
-          {contentType && <p>{differences[contentType]}</p>}
-
-          {/* {tabContent} */}
-        </section>
+        <MenuSection/>
+        <DifSection/>
       </main>
-    </div>
+    </>
   )
 }
 

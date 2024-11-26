@@ -7,7 +7,6 @@ export default function Header() {
     return(
     <header>
         <img src={logo} alt={"name"} />
-        {/* <h3>Bla bla b</h3> */}
 
         <span>Time now: {now.toLocaleTimeString()}</span>
     </header>
