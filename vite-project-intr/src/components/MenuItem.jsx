@@ -1,4 +1,4 @@
-function MenuItem({title, description}) {
+export default function MenuItem({title, description}) {
     return(
       <li>
         <p>

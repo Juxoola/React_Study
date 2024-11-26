@@ -1,6 +1,7 @@
 import Header from "./components/Header"
 import { menu } from "./data"
 import MenuItem from "./components/MenuItem"
+import Button from "./components/Button"
 export default function App() {
   return(
     <div>
@@ -14,6 +15,10 @@ export default function App() {
             <MenuItem {...menu[2]}/>
             <MenuItem {...menu[3]}/>
           </ul>
+        </section>
+        <section>
+          <h3>Order</h3>
+          <Button></Button>
         </section>
       </main>
     </div>
