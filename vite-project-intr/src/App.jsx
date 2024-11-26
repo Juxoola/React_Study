@@ -1,6 +1,7 @@
 import Header from "./components/Header"
 import MenuSection from "./components/MenuSection"
 import DifSection from "./components/DifSection"
+import IntroSection from "./components/IntroSection"
 
 export default function App() {
 
@@ -8,6 +9,7 @@ export default function App() {
     <>
       <Header></Header>
       <main>
+        <IntroSection/>
         <MenuSection/>
         <DifSection/>
       </main>
