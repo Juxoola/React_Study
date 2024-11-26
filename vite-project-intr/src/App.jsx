@@ -18,7 +18,9 @@ export default function App() {
         </section>
         <section>
           <h3>Order</h3>
-          <Button text='Order now'/> 
+          <Button>Перва кнопка</Button>
+          <Button>Вторая кнопка</Button>
+          <Button>Третья кнопка</Button>
         </section>
       </main>
     </div>
