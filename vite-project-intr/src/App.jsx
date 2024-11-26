@@ -1,16 +1,6 @@
 import Header from "./components/Header"
 import { menu } from "./data"
-function MenuItem(props) {
-  console.log(props)
-  return(
-    <li>
-      <p>
-        <strong>{props.title}</strong> {props.description}
-      </p>
-    </li>
-  )
-  
-}
+import MenuItem from "./components/MenuItem"
 export default function App() {
   return(
     <div>
@@ -19,10 +9,10 @@ export default function App() {
         <section>
           <h3>Menu</h3>
           <ul>
-            <MenuItem title={menu[0].title} description={menu[0].description}/>
-            <MenuItem title={menu[1].title} description= {menu[1].description}/>
-            <MenuItem title={menu[2].title} description= {menu[2].description}/>
-            <MenuItem title={menu[3].title} description= {menu[3].description}/>
+            <MenuItem {...menu[0]}/>
+            <MenuItem {...menu[1]}/>
+            <MenuItem {...menu[2]}/>
+            <MenuItem {...menu[3]}/>
           </ul>
         </section>
       </main>
