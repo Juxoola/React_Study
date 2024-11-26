@@ -19,8 +19,10 @@ export default function App() {
         <section>
           <h3>Menu</h3>
           <ul>
-            <MenuItem title="Breakfast" description="Bla bla"/>
-            <MenuItem title="Breakfast 33" description="Bla bla"/>
+            <MenuItem title={menu[0].title} description={menu[0].description}/>
+            <MenuItem title={menu[1].title} description= {menu[1].description}/>
+            <MenuItem title={menu[2].title} description= {menu[2].description}/>
+            <MenuItem title={menu[3].title} description= {menu[3].description}/>
           </ul>
         </section>
       </main>
