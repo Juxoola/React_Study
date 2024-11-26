@@ -6,14 +6,14 @@ import { useState } from "react"
 
 export default function App() {
 
-  const [content, setContent] = useState("Текст")
+  const [contentType, setContentType] = useState(null)
 
   //let content = 'Нажмите на кнопку'
   
   
   function handleClick(type) {
     //console.log('clicked', type)
-    setContent(type)
+    setContentType(type)
     //content = type
   }
   return(
@@ -34,7 +34,13 @@ export default function App() {
           <Button onTouch={() => handleClick('per')}  > Перва кнопка</Button>
           <Button onTouch={() => handleClick('vtor')} > Вторая кнопка</Button>
           <Button onTouch={() => handleClick('tret')} > Третья кнопка</Button>
-          <p>{differences[content]}</p>
+
+          {/* {contentType ? <p>{differences[contentType]}</p> : <p>Нажмите на кнопку</p> } */}
+          {/* { !contentType ? <p>Нажмите на кнопку</p> : null} */}
+          {!contentType && <p>Нажмите на кнопку</p>}
+          {contentType && <p>{differences[contentType]}</p>}
+
+          
         </section>
       </main>
     </div>
