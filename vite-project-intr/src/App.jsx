@@ -32,21 +32,22 @@ export default function App() {
         <section>
           <h3>Menu</h3>
           <ul>
-            <MenuItem {...menu[0]}/>
+            {menu.map(item => <MenuItem key={item.title} {...item} />)}
+            {/* <MenuItem {...menu[0]}/>
             <MenuItem {...menu[1]}/>
             <MenuItem {...menu[2]}/>
-            <MenuItem {...menu[3]}/>
+            <MenuItem {...menu[3]}/> */}
           </ul>
         </section>
         <section>
           <h3>Order</h3>
-          <Button onTouch={() => handleClick('per')}  > Перва кнопка</Button>
-          <Button onTouch={() => handleClick('vtor')} > Вторая кнопка</Button>
-          <Button onTouch={() => handleClick('tret')} > Третья кнопка</Button>
+          <Button isActive = {contentType === 'per'} onTouch={() => handleClick('per')}  > Перва кнопка</Button>
+          <Button isActive = {contentType === 'vtor'} onTouch={() => handleClick('vtor')} > Вторая кнопка</Button>
+          <Button isActive = {contentType === 'tret'} onTouch={() => handleClick('tret')} > Третья кнопка</Button>
 
           {/* {contentType ? <p>{differences[contentType]}</p> : <p>Нажмите на кнопку</p> } */}
           {/* { !contentType ? <p>Нажмите на кнопку</p> : null} */}
-          
+
           {!contentType && <p>Нажмите на кнопку</p>}
           {contentType && <p>{differences[contentType]}</p>}
 
