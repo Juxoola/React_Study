@@ -1,7 +1,7 @@
 import Header from "./components/Header"
 import { menu } from "./data"
 import MenuItem from "./components/MenuItem"
-import Button from "./components/Button"
+import Button from "./components/Button/Button"
 export default function App() {
   return(
     <div>
@@ -18,7 +18,7 @@ export default function App() {
         </section>
         <section>
           <h3>Order</h3>
-          <Button></Button>
+          <Button text='Order now'/> 
         </section>
       </main>
     </div>
