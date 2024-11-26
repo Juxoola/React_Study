@@ -16,6 +16,15 @@ export default function App() {
     setContentType(type)
     //content = type
   }
+
+  // let tabContent = null
+  
+  // if (contentType) {
+  //   tabContent = <p>{differences[contentType]}</p>
+  // }else {
+  //   tabContent = <p>Нажмите на кнопку</p>
+  // }
+
   return(
     <div>
       <Header></Header>
@@ -37,10 +46,11 @@ export default function App() {
 
           {/* {contentType ? <p>{differences[contentType]}</p> : <p>Нажмите на кнопку</p> } */}
           {/* { !contentType ? <p>Нажмите на кнопку</p> : null} */}
+          
           {!contentType && <p>Нажмите на кнопку</p>}
           {contentType && <p>{differences[contentType]}</p>}
 
-          
+          {/* {tabContent} */}
         </section>
       </main>
     </div>
