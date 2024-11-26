@@ -1,11 +1,7 @@
 import './Button.css'
-export default function Button({children}) {
-    
-    function handleClick() {
-        console.log('clicked')
-    }
-
+export default function Button({children, onTouch}) {
     return(
-        <button className='button' onClick={handleClick} onDoubleClick={() => console.log('double clicked')}>{children}</button>
+        
+        <button className='button' onClick={onTouch}>{children}</button>
     )
 }

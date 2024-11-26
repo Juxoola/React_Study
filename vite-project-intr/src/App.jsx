@@ -1,8 +1,21 @@
 import Header from "./components/Header"
-import { menu } from "./data"
+import { menu , differences } from "./data"
 import MenuItem from "./components/MenuItem"
 import Button from "./components/Button/Button"
+import { useState } from "react" 
+
 export default function App() {
+
+  const [content, setContent] = useState("Текст")
+
+  //let content = 'Нажмите на кнопку'
+  
+  
+  function handleClick(type) {
+    //console.log('clicked', type)
+    setContent(type)
+    //content = type
+  }
   return(
     <div>
       <Header></Header>
@@ -18,9 +31,10 @@ export default function App() {
         </section>
         <section>
           <h3>Order</h3>
-          <Button>Перва кнопка</Button>
-          <Button>Вторая кнопка</Button>
-          <Button>Третья кнопка</Button>
+          <Button onTouch={() => handleClick('per')}  > Перва кнопка</Button>
+          <Button onTouch={() => handleClick('vtor')} > Вторая кнопка</Button>
+          <Button onTouch={() => handleClick('tret')} > Третья кнопка</Button>
+          <p>{differences[content]}</p>
         </section>
       </main>
     </div>

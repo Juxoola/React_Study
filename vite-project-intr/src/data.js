@@ -16,3 +16,9 @@ export const menu = [
         description: 'A snack is a small portion of food generally eaten between meals.',
     },
   ];
+
+  export const differences = {
+    per:    'Первая кнопка',
+    vtor:   'Вторая кнопка',
+    tret:   'Третья кнопка',
+    }
