@@ -19,6 +19,7 @@ export default function EffectsSection() {
 			<Modal open={modal}>
 				<h3>Modal</h3>
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+				<Button onClick={() => setModal(false)}>Закрыть</Button>
 			</Modal>
 
 		</section>
