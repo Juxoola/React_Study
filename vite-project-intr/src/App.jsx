@@ -1,4 +1,4 @@
-import Header from "./components/Header"
+import Header from "./components/Header/Header"
 import MenuSection from "./components/MenuSection"
 import DifSection from "./components/DifSection"
 import IntroSection from "./components/IntroSection"
