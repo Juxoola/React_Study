@@ -1,9 +1,33 @@
 import { useState } from 'react'
 import Button from './Button/Button'
+
+function StateVsRef() {
+	const [value, setValue] = useState('')
+	const [show, setShow] = useState(false)
+
+	function handleKeyDown(e) {
+		if (e.key === 'Enter') {
+			setShow(true)
+		}
+	}
+	
+	return (
+		<div>
+			<h3>Input value: {show ? value : '***'}</h3>
+			<input
+				type='text'
+				value={value}
+				onKeyDown={handleKeyDown}
+				onChange={e => setValue(e.target.value)}
+				className='control'
+			/>
+		</div>
+	)
+}
 export default function FeedBackSection() {
 	const [form, setForm] = useState({
 		name: '',
-		hasError: true,
+		hasError: false,
 		reason: 'help',
 	})
 
@@ -21,18 +45,15 @@ export default function FeedBackSection() {
 		}))
 	}
 
-    
-
 	// function toggleError() {
 	// setHasError((prev) => !prev)
 	//}
-    
 
 	return (
 		<section>
 			<h3>Обратная связь</h3>
-			<Button onClick={toggleError}>Toggle error</Button>
-			<form>
+			{/* <Button onClick={toggleError}>Toggle error</Button> */}
+			<form style={{ marginBottom: '1rem' }}>
 				<label htmlFor='name'>Ваше имя</label>
 				<input
 					type='text'
@@ -44,7 +65,6 @@ export default function FeedBackSection() {
 						border: form.hasError ? '1px solid red' : null,
 					}}
 				/>
-                
 
 				<label htmlFor='reason'>Причина обращения</label>
 				<select
@@ -60,10 +80,14 @@ export default function FeedBackSection() {
 					<option value='suggest'>Предложение</option>
 				</select>
 
-				<pre>{JSON.stringify(form, null, 2)}</pre>
+				{/* <pre>{JSON.stringify(form, null, 2)}</pre> */}
 
-				{/* <Button disabled={form.hasError} isActive={!form.hasError}>Отправить</Button> */}
+				<Button disabled={form.hasError} isActive={!form.hasError}>
+					Отправить
+				</Button>
 			</form>
+			<hr />
+			<StateVsRef />
 		</section>
 	)
 }
