@@ -1,5 +1,20 @@
+import { useRef} from 'react'
 import './Modal.css'
+import { createPortal } from 'react-dom'
 
 export default function Modal({ children, open }) {
-	return <dialog open={open}>{children}</dialog>
+	const dialog = useRef()
+
+	if (open) {
+		dialog.current.showModal()
+	}
+	else {
+		dialog.current.close()
+	}
+
+
+	return createPortal(
+		<dialog open={open}>{children}</dialog>,
+		document.getElementById('modal')
+	)
 }
