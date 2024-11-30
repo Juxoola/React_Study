@@ -1,0 +1,27 @@
+input {
+	border: none;
+	border-bottom: 1px solid #000;
+	outline: none;
+}
+
+button {
+	outline: none;
+	border: none;
+	background: violet;
+	border-radius: 0;
+	font-size: 20px;
+	padding: 5px 10px;
+}
+
+div {
+	color: rgb(57, 17, 145);
+	font-weight: bold;
+}
+
+.red-color {
+	color: turquoise;
+}
+
+#someId {
+	color: blue;
+}
