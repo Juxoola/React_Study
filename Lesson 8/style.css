@@ -1,0 +1,23 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	width: 700px;
+	color: white;
+	background-image: url(img/img.png);
+	background-size: 100%;
+	background-repeat: repeat-y; /*Нету background-repeat-y*/
+}
+.square {
+	width: 500px; /*viewport width*/
+}
+.square_red {
+	background-color: red;
+	color: yellow;
+}
+
+.square_green {
+	background: green;
+}
