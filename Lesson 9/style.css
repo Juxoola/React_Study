@@ -1,0 +1,32 @@
+* {
+	background: black;
+}
+[href] {
+	color: red;
+}
+
+[href="https://ya.ru"]
+{
+	color: green;
+}
+
+[class~='class-1'] {
+	color: gray;
+}
+
+[class|='classs'] {
+	color: green;
+}
+
+[href^="https://vk"]
+{
+	color: plum;
+}
+
+[href$='.org'] {
+	color: aquamarine;
+}
+
+[href*='examplE'] {
+	color: chocolate;
+}
