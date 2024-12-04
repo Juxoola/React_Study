@@ -1,0 +1,32 @@
+* {
+	background: black;
+}
+[href] {
+	color: red;
+}
+/*полное совпадение*/
+[href="https://ya.ru"]
+{
+	color: green;
+}
+/*содержится*/
+[class~='class-1'] {
+	color: gray;
+}
+/*содержится до -*/
+[class|='classs'] {
+	color: green;
+}
+
+[href^="https://vk"]   /*начинается ли строка*/
+{
+	color: plum;
+}
+/*заканчивается ли строка*/
+[href$='.org'] {
+	color: aquamarine;
+}
+/*содержится, но без учета регистра*/
+[href*='examplE'] {
+	color: chocolate;
+}
