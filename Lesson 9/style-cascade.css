@@ -1,8 +1,11 @@
-/* #my_id {
+/*Приоритеты: id, class, элемент */
+
+/* #my_id {      
 	color: blue;
 } */
 
-div.class-2 {
+/* складываются приоритеты*/
+/* div.class-2 {  
 	color: aqua;
 }
 
@@ -12,4 +15,21 @@ div.class-2 {
 
 div {
 	color: green;
+} */
+
+.container .red-text {  /* все наследники даже вложенные*/
+	color: red;
+}
+
+.container > span {  /* прямые наследники*/
+	color: blue;
+}
+
+  /* только соседи(следующий элемент) neighbor-1*/
+/* .neighbor-1 + .neighbor-2 { 
+	color: yellowgreen;
+} */
+
+.neighbor-1 ~ .neighbor-2 {  /* все ниже neighbor-1 не смотря на пропуски*/
+	color: violet;
 }
