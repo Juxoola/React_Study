@@ -1,0 +1,60 @@
+.lesson-button {
+	padding: 5px 10px;
+	background: red;
+	color: white;
+	border: none;
+	outline: none;
+	border-radius: 0;
+}
+
+.lesson-button_disabled {
+	pointer-events: none;
+	background: #ccc;
+	color: #aaa;
+}
+
+.news {
+}
+
+.news__items {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.news__item {
+	margin: 0 40px;
+	box-shadow: 1px 0px 14px #ccc;
+	padding: 30px;
+	width: 500px;
+}
+.news__item-image {
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+}
+
+.news__item-title {
+	font-size: 30px;
+	margin-bottom: 0;
+	margin: 0;
+}
+
+.news_item-description {
+	margin-top: 20px;
+}
+
+.news__item_theme_dark {
+	background: black;
+}
+
+.news__item_theme_yellow {
+	background: yellow;
+}
+
+.news__item_theme_dark .news__item-title {
+	color: white;
+}
+
+.news__item_theme_dark .news__item-description {
+	color: white;
+}
