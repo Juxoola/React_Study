@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" type="text/css" />
+		<title>Frontend | Lesson 13</title>
+	</head>
+	<body>
+		<form method="POST" action="/submit">
+			<div>
+				<input type="checkbox" id="checkbox-input" checked />
+				<label for="checkbox-input">Checkbox</label>
+			</div>
+			<div>
+				<label for="email-input">Мыло</label>
+				<input
+					type="email"
+					id="email-input"
+					placeholder="Введите почту"
+					required
+				/>
+			</div>
+			<div>
+				<label for="file-input">Файл</label>
+				<input type="file" id="file-input" accept="image/*" multiple />
+			</div>
+			<div>
+				<label for="number-input">Номер</label>
+				<input type="number" id="number-input" max="15" min="2" />
+			</div>
+			<div>
+				<label for="password-input">Пароль</label>
+				<input type="password" id="password-input" />
+			</div>
+			<div>
+				<input
+					type="radio"
+					id="radio-input1"
+					name="radio-group"
+					value="RADIO1"
+				/>
+				<label for="radio-input1">Radio 1</label>
+				<input
+					type="radio"
+					id="radio-input2"
+					name="radio-group"
+					value="RADIO2"
+				/>
+				<label for="radio-input2">Radio 2</label>
+			</div>
+			<div>
+				<label for="tel-input">Телефон</label>
+				<input type="tel" id="tel-input" maxlength="11" readonly />
+			</div>
+			<div>
+				<label for="url-input">URL</label>
+				<input type="url" id="url-input" />
+			</div>
+			<div>
+				<label for="disabled-input">Disabled</label>
+				<input type="text" id="disabled-input" value="Value" disabled />
+			</div>
+			<div>
+				<label for="input-mode-input">InputMode</label>
+				<input
+					type="text"
+					id="input-mode-input"
+					value="Value"
+					inputmode="numeric"
+				/>
+			</div>
+			<input type="reset" name="" id="" />
+			<button>Submit</button>
+		</form>
+	</body>
+</html>
