@@ -1,0 +1,37 @@
+.square {
+	width: 100px;
+	height: 100px;
+	background: red;
+}
+
+@media screen and (max-width: 1920px) and (min-width: 1441px) {
+	.square {
+		background: lawngreen;
+	}
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1281px) {
+	.square {
+		background: aqua;
+	}
+}
+
+@media screen and (max-width: 1280px) and (min-width: 769px) {
+	.square {
+		background: yellow;
+	}
+}
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
+	.square {
+		background: purpleblue;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
+	.square {
+		background: blue;
+		width: 100%;
+	}
+}
