@@ -1,0 +1,91 @@
+.button {
+	outline: none;
+	border: none;
+	background-color: red;
+	padding: 5px 7px;
+	border-radius: 5px;
+	transition: 0.2s background-color;
+}
+button:focus {
+	background: rebeccapurple;
+}
+
+.button:hover {
+	background-color: rgba(255, 0, 0, 0.6);
+}
+
+.paragraph {
+	color: gray;
+}
+
+.paragraph:active {
+	color: green;
+}
+
+.link {
+	color: red;
+}
+
+.link:active {
+	color: orange;
+}
+
+.link:visited {
+	color: blueviolet;
+}
+
+.link:focus {
+	outline: none;
+	background: lightcoral;
+	border-radius: 5px;
+}
+
+.block,
+.block-2 {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.block__elem,
+.block-2__elem {
+	width: 40px;
+	height: 40px;
+	background: red;
+	margin: 20px;
+}
+
+.block__elem:first-child {
+	background: magenta;
+}
+
+.block__elem:nth-child(3n + 1) {
+	background: magenta;
+}
+
+.block__elem:last-child {
+	background: paleturquoise;
+}
+
+.block__elem:nth-last-child(3) {
+	background: yellow;
+}
+
+.block__elem:nth-last-child(2n + 1) {
+	background: palegreen;
+}
+
+.block-2__elem:first-of-type {
+	background: lawngreen;
+}
+
+.block-2__elem:nth-of-type(2n + 1) {
+	background: yellow;
+}
+
+.block-2__elem:nth-of-type(5) {
+	background: hotpink;
+}
+
+.block-2__elem:nth-last-of-type(1) {
+	background: gray;
+}
