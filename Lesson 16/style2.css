@@ -1,0 +1,24 @@
+.grid-container {
+	display: grid;
+	grid-template-rows: [row-1-start] 1fr [row-1-end row-2-start] 1fr  [row-2-end] 1fr;
+	grid-template-columns: [column-1-start] 1fr [column-1-end column-2-start] 1fr  [column-2-end] 1fr;
+	background: magenta;
+	height: 300px;
+  row-gap: 10px;
+  column-gap: 10px;
+
+}
+
+.grid-container__item {
+	/* width: 100px;
+	height: 100px; */
+	background: orange;
+  border: 1px solid black;
+}
+
+.grid-container__item:nth-child(5) {
+	grid-column-start: column-1-start;
+  grid-row-start: row-1-start;
+  grid-row-end: row-2-end ;
+  grid-column-end: column-2-end;
+}
