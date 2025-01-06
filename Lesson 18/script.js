@@ -33,3 +33,8 @@ console.log('hi'.toUpperCase());
 
 //unboxing Объект приводится к примитиву
 console.log(Number(5));
+
+let i = 0
+i++;
+i--;
+console.log(++i);
