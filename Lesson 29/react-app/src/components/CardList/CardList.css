@@ -1,0 +1,15 @@
+.card-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card-list_item{
+  margin-top: 40px;
+}
+
+.card-list_item:nth-child(1),
+.card-list_item:nth-child(2),
+.card-list_item:nth-child(3){
+  margin-top: 0;
+}
