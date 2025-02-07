@@ -3,6 +3,7 @@ import './App.css';
 import Inline from './components/Inline/Inline';
 import Styled from './components/Styled/Styled';
 import Modules from './components/Modules/Modules';
+import MaterialUI from './components/MaterialUI/MaterialUI';
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
 			{/* <Inline type={'red'} />
 			<Inline type={'green'} /> */}
       {/* <Styled/> */}
-      <Modules/>
+      {/* <Modules/> */}
+      <MaterialUI/>
 		</div>
 	)
 }
