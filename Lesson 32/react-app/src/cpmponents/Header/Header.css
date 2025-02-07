@@ -1,0 +1,36 @@
+.header {
+	background-color: #28a745;
+	padding: 20px;
+	text-align: center;
+}
+
+.header__title {
+	margin: 0;
+	font-size: 2rem;
+	color: #fff;
+}
+
+.header__links {
+	margin-top: 10px;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+
+.header__link {
+	color: #fff;
+	text-decoration: none;
+	transition: color 0.3s;
+}
+
+.header__title a {
+	color: white;
+	text-decoration: none;
+}
+
+.header__title a:visited {
+	color:  white;
+}
+
+
+
